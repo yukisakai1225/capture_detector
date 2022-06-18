@@ -1,15 +1,35 @@
 # capture_detector
 
-A new Flutter plugin.
+Flutter plugin that allows you to detect iOS screen capture.
 
-## Getting Started
+## Usage
+### Import the package
+To use this plugin, follow the [**plugin installation instructions**](https://pub.dev/packages/capture_detector#-installing-tab-).
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+### Use the plugin
+Add the following import to your Dart code:
+```dart
+import 'package:capture_detector/capture_detector.dart';
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+There are two way to get state of screen captured.
 
+##### Subscription
+```dart
+CaptureDetector.isCapturedStream.listen((event) => print(event));
+```
+
+##### Once
+```dart
+CaptureDetector.getIsCaptured.then((val) => print(val));
+```
+
+## Issues and Feedback
+Please [**file**](https://github.com/yukisakai1225/capture_detector/issues/new) issues to send feedback or report a bug. Thank you !
+
+## Author
+- [Sakai Yuki](https://github.com/yukisakai1225) • <yukisakai1225@gmail.com>
+
+## License
+
+MIT
